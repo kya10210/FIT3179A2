@@ -1,0 +1,96 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v4.json", 
+  "width": 500,
+  "height": 400,
+  "config":{"font":"Geneva"},
+  "title": {"text":"3 Trust Rating in Europe 2013", "fontWeight":"bold"},
+  "data": {
+    "url": "https://kya10210.github.io/FIT3179A2/data/trust_rating_combined.csv"
+  },
+  "encoding":{
+    "x": {
+      "field": "legal_trust_rating",
+      "type": "quantitative",
+      "title": "Legal Trust Rating",
+      "axis": { "tickCount": 3},
+      "scale": {"type": "linear", "domain": [0, 8]}
+    }, 
+    "y": {
+      "field": "political_trust_rating",
+      "type": "quantitative",
+      "axis": {"tickCount": 3},
+      "title": "Political Trust Rating",
+
+      "scale": {"type": "linear", "domain": [0, 8]} 
+    }
+  },
+  "layer":[
+    {
+      "selection": { 
+        "subregion_highlight": {
+          "type": "multi", "fields": ["subregion"], "bind": "legend"
+        }
+      },
+      "mark": "circle", 
+      "encoding": { 
+        "color": {
+          "field": "subregion",
+          "title":"Subregion",
+          "type": "nominal", 
+          "scale": {
+            "domain": [
+              "Western Europe", "Eastern Europe", "Northern Europe",  "Southern Europe"],
+            "range": [
+    "#e41a1c", "#984ea3", "grey", "blue"
+            ]
+          }
+        },
+      "opacity": {
+        "condition": {
+          "selection": "subregion_highlight", "value": 0.8},
+          "value": 0.2 },
+      "size": {
+        "field": "police_trust_rating",
+        "title": "Police Trust Rating",
+        "type": "quantitative",
+        "scale": {
+          "type": "threshold",
+          "domain": [2, 4, 6, 8], 
+          "range": [50, 150, 200, 400, 600]
+        },
+      "legend": {"format": ".2s"}
+      },
+    "tooltip": [
+      {"field": "country", "type": "nominal", "title":"Country"},
+      {"field": "police_trust_rating", "type": "quantitative","format":",", "title":"Police Trust Rating"}, 
+      {"field": "legal_trust_rating", "type": "quantitative", "format": ",","title":"Legal Trust Rating"},        {"field": "political_trust_rating", "type": "quantitative", "format": ",","title":"Political Trust Rating"}]
+    }},
+{"mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -10,
+        "dy":-3,
+        "fontSize": 11,
+        "fontStyle": "Geneva"
+      },
+      "encoding": {
+        "text": {"field": "country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['country'] == 'Spain' || datum['country'] == 'Switzerland' || datum['country'] == 'Norway' || datum['country'] == 'Malta' || datum['country'] == 'Italy'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+        {"field": "country", "type": "nominal","title":"Country"},
+{"field": "police_trust_rating", "type": "quantitative","format":",","title":"Police Trust Rating"}, 
+{"field": "legal_trust_rating", "type": "quantitative", "format": ",","title":"Legal Trust Rating"}, {"field": "political_trust_rating", "type": "quantitative", "format": ",","title":"Political Trust Rating"}
+        ]
+      }
+    }
+]
+
+ 
+}
