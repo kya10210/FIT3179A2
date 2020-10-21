@@ -2,7 +2,7 @@
   "width": 500,
   "height": 400,
   "config":{"font":"Geneva"},
-  "title": {"text":"3 Trust Rating in Europe 2013", "fontWeight":"bold"},
+  "title": {"text":"3 Trust Rating Index in Europe 2013", "fontWeight":"bold"},
   "data": {
     "url": "https://kya10210.github.io/FIT3179A2/data/trust_rating_combined.csv"
   },
@@ -78,7 +78,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['country'] == 'Spain' || datum['country'] == 'Switzerland' || datum['country'] == 'Norway' || datum['country'] == 'Malta' || datum['country'] == 'Italy'",
+            "test": "datum['country'] == 'Slovenia' || datum['country'] == 'Switzerland' || datum['country'] == 'Norway' || datum['country'] == 'Malta' || datum['country'] == 'France'",
             "value": 1
           },
           "value": 0
@@ -91,6 +91,4 @@
       }
     }
 ]
-
- 
 }
