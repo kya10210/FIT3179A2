@@ -9,21 +9,21 @@
 </head>
 <body>
 
-<h2>Week 8 Visualisation (example)</h2>
+<h2>Life Expectation</h2>
 <div id="vis"></div>
   
-<h2>Week 9 visualisation (map)</h2>
-<div id="vis2"></div>
+<!-- <h2>Week 9 visualisation (map)</h2>
+<div id="vis2"></div> -->
 
 <script type="text/javascript">
-  var spec = "https://kya10210.github.io/FIT3179/visualization.vl.json";
-  var specVis2= "https://kya10210.github.io/FIT3179/js/map.vg.json";
+  var spec = "https://kya10210.github.io/FIT3179A2/js/life_expect.json";
+//   var specVis2= "https://kya10210.github.io/FIT3179/js/map.vg.json";
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-    vegaEmbed('#vis2', specVis2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+//     vegaEmbed('#vis2', specVis2).then(function(result) {
+//     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+//   }).catch(console.error);
 </script>
 </body>
 </html>
