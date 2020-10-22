@@ -3,7 +3,7 @@
   "width": 800,
   "height": 500,
   "config":{"font":"Geneva"},
-  "title": "Unemployment Rate & Average Working Hour per Week in Europe 2016",
+  "title": "Unemployment Rate & Average Working Hours per Week in Europe 2016",
    "projection": {
       "type": "conicEqualArea",
       "parallels": [65.5,41],
@@ -45,7 +45,7 @@
                       "type": "quantitative",
                       "scale":{
                           "type": "threshold",
-          "domain": [30,35,  40],
+          "domain": [35, 40, 45],
           "range": ["#fdcc8a", "#fc8d59", "#e34a33","#b30000"]
                       }          
             }
