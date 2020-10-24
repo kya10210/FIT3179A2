@@ -1,19 +1,18 @@
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+{ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 800,
   "height": 500,
   "config":{"font":"Geneva"},
   "title": "Unemployment Rate & Average Working Hours per Week in Europe 2016",
-   "projection": {
-      "type": "conicEqualArea",
-      "parallels": [65.5,41],
-      "rotate":[-16,0,0]
-    },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [65.5,41],
+    "rotate":[-16,0,0]
+  },
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/kya10210/FIT3179A2/main/js/europe.json",
-        "format": {"type": "topojson", "feature": "custom"}
+       "url": "https://raw.githubusercontent.com/kya10210/FIT3179A2/main/js/europe.json",
+       "format": {"type": "topojson", "feature": "custom"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
@@ -28,10 +27,14 @@
       "layer": [
         {
           "mark": {
-            "type": "circle",
-            "tooltip":{"content": "data"}
+            "type": "circle"
           },
           "encoding": {
+            "tooltip":[
+              {"field": "country", "type": "nominal", "title":"Country"},
+              {"field": "unemp_rate", "type": "quantitative", "title":"Unemployment Rate"},
+              {"field": "avg_hrs_worked", "type": "quantitative", "title":"Average Working Hours/Week"}],
+
             "size": {"field": "unemp_rate", 
                      "title":"Unemployment Rate (%)",
                      "type": "quantitative",
