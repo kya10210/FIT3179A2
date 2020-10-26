@@ -1,6 +1,5 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v4.json", 
   "width": "container",
-  "height": 400,
   "config":{"font":"Geneva"},
   "title": {"text":"3 Trust Rating Index in Europe 2013", "fontWeight":"bold"},
   "data": {
