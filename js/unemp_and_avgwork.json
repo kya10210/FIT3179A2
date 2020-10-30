@@ -2,7 +2,6 @@
   "width": "container",
   "height": 400,
   "config":{"font":"Geneva"},
-  "title": "Unemployment Rate & Average Working Hours in Europe 2016",
   "projection": {
     "type": "conicEqualArea",
     "parallels": [65.5,41],
