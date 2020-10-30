@@ -15,7 +15,7 @@
     "point": true
   },
     "encoding": {
-      "x": {
+      "y": {
         "field": "country",
         "type": "nominal",
         "title": "Country"
@@ -27,7 +27,7 @@
       {"field": "prct_env_satis_low", "type": "quantitative","title":"Low Satifaction (%)"}
 
     ],
-      "y": {
+      "x": {
         "field": {"repeat": "layer"},
         "type": "quantitative",
         "title": "Percentage (%)"
