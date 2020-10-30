@@ -25,7 +25,9 @@
     "projection": {
       "type": "conicEqualArea",
       "parallels": [65.5,41],
-      "rotate":[-16,0,0]
+      "rotate":[-16,0,0],
+      "scale": 250,
+      "center":[-5, 57]
     },
     "mark": {
       "type": "geoshape"
